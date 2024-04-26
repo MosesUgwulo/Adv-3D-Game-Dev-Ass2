@@ -17,7 +17,6 @@ namespace NPCs
         
         public void Interact()
         {
-            
             DialogueManager.Instance.StartDialogue(npcName, character.dialogues);
         }
 

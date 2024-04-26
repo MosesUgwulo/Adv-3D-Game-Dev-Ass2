@@ -14,7 +14,7 @@ namespace Managers
         public TMP_Text dialogueText;
         public TMP_Text option1, option2;
         public Animator anim;
-        private static readonly int IsOpen = Animator.StringToHash("IsOpen");
+        public static readonly int IsOpen = Animator.StringToHash("IsOpen");
 
         private void Awake()
         {

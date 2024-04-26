@@ -1,4 +1,5 @@
 using System;
+using Managers;
 using NPCs;
 using UnityEngine;
 
@@ -52,6 +53,17 @@ namespace Player
             {
                 var interactable = hit.gameObject.GetComponent<Interactable>();
                 Debug.Log("Interacting with " + interactable.npcName);
+                
+                interactable.Interact();
+            }
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            if (other.gameObject.CompareTag("NPC"))
+            {
+                HUDManager.Instance.anim.SetBool(HUDManager.IsOpen, false);
+                Cursor.lockState = CursorLockMode.Locked;
             }
         }
     }

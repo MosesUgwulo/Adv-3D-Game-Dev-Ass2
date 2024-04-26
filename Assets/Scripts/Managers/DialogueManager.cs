@@ -59,6 +59,12 @@ namespace Managers
             HUDManager.Instance.anim.SetBool(IsOpen, true);
             HUDManager.Instance.nameText.text = npcName;
             
+            HUDManager.Instance.option1.text = sentences[0].decisions[0].content;
+            HUDManager.Instance.option2.text = sentences[0].decisions[1].content;
+            
+            Cursor.lockState = CursorLockMode.None;
+            
+            
             _sentences.Clear();
             
             foreach (var sentence in sentences)
