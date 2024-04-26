@@ -12,7 +12,7 @@ namespace Managers
         [Header("Dialogue")]
         public TMP_Text nameText;
         public TMP_Text dialogueText;
-        public TMP_Text option1, option2;
+        public TMP_Text option1, option2, option3;
         public Animator anim;
         public static readonly int IsOpen = Animator.StringToHash("IsOpen");
 
