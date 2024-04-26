@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<CharacterSaveData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <_characters>
+    <Character name="Michael" questID="Quest1">
+      <dialogues>
+        <Dialogue id="0" content="Hello Stranger! What brings you here!">
+          <decisions>
+            <Decision content="Hi there, would you know where I can find the golden globe?" target="2" />
+            <Decision content="Hi there, are you from here, Im kind of lost?" target="1" />
+          </decisions>
+        </Dialogue>
+        <Dialogue id="1" content="Yes, Ive been living here for decades, what brings you here?">
+          <decisions>
+            <Decision content="I am looking for the golden globe" target="2" />
+            <Decision content="None of your business!" target="-1" />
+          </decisions>
+        </Dialogue>
+        <Dialogue id="2" content="The Golden globe, yes; it is in the yellow house!">
+          <decisions>
+            <Decision content="Thank you!" target="-1" />
+            <Decision content="Brilliant, would you also know about where to find the yellow house" target="3" />
+          </decisions>
+        </Dialogue>
+        <Dialogue id="3" content="Of course, this house is about 100 meters north from here!">
+          <decisions>
+            <Decision content="Thanks man; much appreciated!" target="-1" />
+            <Decision content="Fantastic!" target="-1" />
+          </decisions>
+        </Dialogue>
+      </dialogues>
+    </Character>
+    <Character name="Moses" questID="Quest2">
+      <dialogues>
+        <Dialogue id="0" content="Hey bro">
+          <decisions>
+            <Decision content="Test content 1" target="2" />
+            <Decision content="Cha cha" target="1" />
+          </decisions>
+        </Dialogue>
+        <Dialogue id="1" content="Yes sir">
+          <decisions>
+            <Decision content="Che" target="2" />
+            <Decision content="LOhfd" target="-1" />
+          </decisions>
+        </Dialogue>
+        <Dialogue id="2" content="Mi so hunger">
+          <decisions>
+            <Decision content="yappa" target="-1" />
+            <Decision content="ongoing" target="3" />
+          </decisions>
+        </Dialogue>
+        <Dialogue id="3" content="Lpoe">
+          <decisions>
+            <Decision content="Meysi" target="-1" />
+            <Decision content="sdagrsh" target="-1" />
+          </decisions>
+        </Dialogue>
+      </dialogues>
+    </Character>
+  </_characters>
+</CharacterSaveData>

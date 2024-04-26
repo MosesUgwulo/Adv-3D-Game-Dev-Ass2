@@ -1,3 +1,5 @@
+using System;
+using NPCs;
 using UnityEngine;
 
 namespace Player
@@ -42,6 +44,15 @@ namespace Player
             _velocity.y += gravity * Time.deltaTime;
             
             controller.Move(_velocity * Time.deltaTime);
+        }
+
+        private void OnControllerColliderHit(ControllerColliderHit hit)
+        {
+            if (hit.collider.CompareTag("NPC"))
+            {
+                var interactable = hit.gameObject.GetComponent<Interactable>();
+                Debug.Log("Interacting with " + interactable.npcName);
+            }
         }
     }
 }
