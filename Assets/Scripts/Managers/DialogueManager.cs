@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Xml.Serialization;
-using HUD;
+using Classes;
 using NPCs;
 using TMPro;
 using UnityEngine;
@@ -48,7 +48,7 @@ namespace Managers
                 }
             }
             
-            Debug.Log("Loaded " + _charactersById.Count + " characters.");
+            // Debug.Log("Loaded " + _charactersById.Count + " characters.");
         }
 
 
@@ -95,7 +95,7 @@ namespace Managers
         private void DisplayNextSentence(int optionSelected)
         {
             string targetID = _currentDialogue.decisions[optionSelected].target.ToString();
-            Debug.Log("Target ID: " + targetID);
+            // Debug.Log("Target ID: " + targetID);
 
             if (targetID == "-1")
             {
@@ -111,7 +111,7 @@ namespace Managers
                 {
                     if (dialogue.id == targetID)
                     {
-                        Debug.Log("Character: " + character.questID + " Dialogue: " + dialogue.content);
+                        // Debug.Log("Character: " + character.questID + " Dialogue: " + dialogue.content);
                         nextDialogue = dialogue;
                         break;
                     }

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<QuestSaveData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <_quests>
+    <Quest questID="Quest1" isCompleted="false">
+      <stage stageID="0" stageName="Level 1" stageDescription="Tutorial">
+        <results action="TalkTo" target="Yasir" xp="10" isCompleted="false" />
+        <results action="Destroy" target="Dummy" xp="45" isCompleted="false" />
+        <results action="Location" target="Pool" xp="45" isCompleted="false" />
+        <results action="Acquire" target="Apple" xp="87" isCompleted="false" />
+      </stage>
+    </Quest>
+    <Quest questID="Quest2" isCompleted="false">
+      <stage stageID="1" stageName="Level 2" stageDescription="Intermediate">
+        <results action="TalkTo" target="Yasir" xp="10" isCompleted="false" />
+        <results action="Destroy" target="Dummy" xp="45" isCompleted="false" />
+        <results action="Location" target="Pool" xp="45" isCompleted="false" />
+        <results action="Acquire" target="Apple" xp="87" isCompleted="false" />
+      </stage>
+    </Quest>
+    <Quest questID="Quest3" isCompleted="false">
+      <stage stageID="2" stageName="Level 3" stageDescription="End game">
+        <results action="TalkTo" target="Yasir" xp="10" isCompleted="false" />
+        <results action="Destroy" target="Dummy" xp="45" isCompleted="false" />
+        <results action="Location" target="Pool" xp="45" isCompleted="false" />
+        <results action="Acquire" target="Apple" xp="87" isCompleted="false" />
+      </stage>
+    </Quest>
+  </_quests>
+</QuestSaveData>

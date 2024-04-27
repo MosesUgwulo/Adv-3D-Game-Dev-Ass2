@@ -51,10 +51,20 @@ namespace Player
         {
             if (hit.collider.CompareTag("NPC"))
             {
+                var quest = QuestManager.Instance.GetQuest();
+                var stage = QuestManager.Instance.GetStage(quest.stages[0].stageID);
+                var result = QuestManager.Instance.GetResult(stage.stageID);
+
+                if (result.target != hit.collider.GetComponent<Interactable>().npcName)
+                {
+                    Debug.Log("Wrong NPC");
+                    return;
+                }
                 var interactable = hit.gameObject.GetComponent<Interactable>();
                 Debug.Log("Interacting with " + interactable.npcName);
-                
                 interactable.Interact();
+                result.isCompleted = true;
+                QuestManager.Instance.UpdateQuestUI();
             }
         }
 

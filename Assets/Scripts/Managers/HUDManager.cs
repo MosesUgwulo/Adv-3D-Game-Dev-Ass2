@@ -15,6 +15,11 @@ namespace Managers
         public TMP_Text option1, option2, option3;
         public Animator anim;
         public static readonly int IsOpen = Animator.StringToHash("IsOpen");
+        
+        [Header("Quests")]
+        public GameObject questTab;
+        public TMP_Text stageDescription;
+        public TMP_Text questDetails;
 
         private void Awake()
         {
@@ -36,10 +41,7 @@ namespace Managers
 
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.I)) // TODO: Change this so that it works when the player is near an NPC
-            {
-                anim.SetBool(IsOpen, !anim.GetBool(IsOpen));
-            }
+            
         }
     }
 }
