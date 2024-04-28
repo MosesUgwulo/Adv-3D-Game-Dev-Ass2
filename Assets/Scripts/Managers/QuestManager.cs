@@ -4,6 +4,7 @@ using System.Linq;
 using System.Xml.Serialization;
 using Classes;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Managers
 {
@@ -52,10 +53,51 @@ namespace Managers
         public void UpdateQuestUI()
         {
             _currentQuest = GetQuest();
+            if (_currentQuest == null)
+            {
+                HUDManager.Instance.stageDescription.text = "All quests completed!";
+                HUDManager.Instance.questDetails.text = "";
+                return;
+            }
+            
             _currentStage = GetStage(_currentQuest.stages[0].stageID);
+            if (_currentStage == null)
+            {
+                HUDManager.Instance.stageDescription.text = "Stage completed!";
+                HUDManager.Instance.questDetails.text = "";
+                return;
+            }
+            
             _currentResult = GetResult(_currentStage.stageID);
+            if (_currentResult == null)
+            {
+                HUDManager.Instance.stageDescription.text = _currentStage.stageDescription;
+                HUDManager.Instance.questDetails.text = "All actions completed!, Proceed to next level.";
+                _currentQuest.isCompleted = true;
+                UpdateQuestUI();
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                return;
+            }
+
+            string questPrefix = "";
+            switch (_currentResult.questType)
+            {
+                case QuestType.TalkTo:
+                    questPrefix = "Talk to";
+                    break;
+                case QuestType.Acquire:
+                    questPrefix = "Acquire a";
+                    break;
+                case QuestType.Destroy:
+                    questPrefix = "Destroy the";
+                    break;
+                case QuestType.Location:
+                    questPrefix = "Find the";
+                    break;
+            }
+            
             HUDManager.Instance.stageDescription.text = _currentStage.stageDescription;
-            HUDManager.Instance.questDetails.text = _currentResult.questType + " " + _currentResult.target;
+            HUDManager.Instance.questDetails.text = questPrefix + " " + _currentResult.target;
         }
 
         public Quest GetQuest()
@@ -72,21 +114,14 @@ namespace Managers
         {
             return GetStage(stageID).results.FirstOrDefault(r => !r.isCompleted);
         }
-
+        
+        public (Quest, Stage, Result) GetCurrentQuestStageResult()
+        {
+            return (_currentQuest, _currentStage, _currentResult);
+        }
+        
         void Update()
         {
-            // if (Input.GetKeyDown(KeyCode.L))
-            // {
-            //     if (_currentStage.results.All(r => r.isCompleted))
-            //     {
-            //         _currentQuest.isCompleted = true;
-            //         UpdateQuestUI();
-            //         return;
-            //     }
-            //     _currentResult.isCompleted = true;
-            //     UpdateQuestUI();
-            // }
-            
             // if (Input.GetKeyDown(KeyCode.Q))
             // {
             //     Save(_filePath, new QuestSaveData(quests));

@@ -5,6 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - NPC
+  - Wall
+  - Map
+  - Barrier
+  - Echo Gorge
+  - Sword
+  - Village
+  - Cursed Statue
   layers:
   - Default
   - TransparentFX

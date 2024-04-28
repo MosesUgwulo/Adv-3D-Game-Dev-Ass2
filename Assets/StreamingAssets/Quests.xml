@@ -2,27 +2,27 @@
 <QuestSaveData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <_quests>
     <Quest questID="Quest1" isCompleted="false">
-      <stage stageID="0" stageName="Level 1" stageDescription="Tutorial">
-        <results action="TalkTo" target="Yasir" xp="10" isCompleted="false" />
-        <results action="Destroy" target="Dummy" xp="45" isCompleted="false" />
-        <results action="Location" target="Pool" xp="45" isCompleted="false" />
-        <results action="Acquire" target="Apple" xp="87" isCompleted="false" />
+      <stage stageID="0" stageName="Level 1" stageDescription="Help Miguel find the hidden village">
+        <results action="TalkTo" target="Miguel" xp="10" isCompleted="false" />
+        <results action="Acquire" target="Map" xp="10" isCompleted="false" />
+        <results action="Destroy" target="Barrier" xp="45" isCompleted="false" />
+        <results action="Location" target="Echo Gorge" xp="50" isCompleted="false" />
       </stage>
     </Quest>
     <Quest questID="Quest2" isCompleted="false">
-      <stage stageID="1" stageName="Level 2" stageDescription="Intermediate">
+      <stage stageID="1" stageName="Level 2" stageDescription="Help Yasir destroy the cursed statue">
         <results action="TalkTo" target="Yasir" xp="10" isCompleted="false" />
-        <results action="Destroy" target="Dummy" xp="45" isCompleted="false" />
-        <results action="Location" target="Pool" xp="45" isCompleted="false" />
-        <results action="Acquire" target="Apple" xp="87" isCompleted="false" />
+        <results action="Acquire" target="Sword" xp="15" isCompleted="false" />
+        <results action="Location" target="Village" xp="30" isCompleted="false" />
+        <results action="Destroy" target="Cursed Statue" xp="45" isCompleted="false" />
       </stage>
     </Quest>
     <Quest questID="Quest3" isCompleted="false">
-      <stage stageID="2" stageName="Level 3" stageDescription="End game">
-        <results action="TalkTo" target="Yasir" xp="10" isCompleted="false" />
-        <results action="Destroy" target="Dummy" xp="45" isCompleted="false" />
-        <results action="Location" target="Pool" xp="45" isCompleted="false" />
-        <results action="Acquire" target="Apple" xp="87" isCompleted="false" />
+      <stage stageID="2" stageName="Level 3" stageDescription="Help Bella retrieve the rare artifact">
+        <results action="TalkTo" target="Bella" xp="10" isCompleted="false" />
+        <results action="Acquire" target="Special Lantern" xp="5" isCompleted="false" />
+        <results action="Location" target="Whispering Caves" xp="50" isCompleted="false" />
+        <results action="Location" target="Starlight Pendant" xp="100" isCompleted="false" />
       </stage>
     </Quest>
   </_quests>

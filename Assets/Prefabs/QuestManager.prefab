@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5515263031570204158
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3758519503214285706}
+  - component: {fileID: 275987224994172058}
+  m_Layer: 0
+  m_Name: QuestManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3758519503214285706
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5515263031570204158}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &275987224994172058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5515263031570204158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81dd523f23d8d9c48a7a64e91daef36c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quests:
+  - questID: Quest1
+    isCompleted: 0
+    stages:
+    - stageID: 0
+      stageName: Level 1
+      stageDescription: Tutorial
+      results:
+      - questType: 0
+        target: Yasir
+        xp: 10
+        isCompleted: 0
+      - questType: 2
+        target: Dummy
+        xp: 45
+        isCompleted: 0
+      - questType: 3
+        target: Pool
+        xp: 45
+        isCompleted: 0
+      - questType: 1
+        target: Apple
+        xp: 87
+        isCompleted: 0
+  - questID: Quest2
+    isCompleted: 0
+    stages:
+    - stageID: 1
+      stageName: Level 2
+      stageDescription: Intermediate
+      results:
+      - questType: 0
+        target: Yasir
+        xp: 10
+        isCompleted: 0
+      - questType: 2
+        target: Dummy
+        xp: 45
+        isCompleted: 0
+      - questType: 3
+        target: Pool
+        xp: 45
+        isCompleted: 0
+      - questType: 1
+        target: Apple
+        xp: 87
+        isCompleted: 0
+  - questID: Quest3
+    isCompleted: 0
+    stages:
+    - stageID: 2
+      stageName: Level 3
+      stageDescription: End game
+      results:
+      - questType: 0
+        target: Yasir
+        xp: 10
+        isCompleted: 0
+      - questType: 2
+        target: Dummy
+        xp: 45
+        isCompleted: 0
+      - questType: 3
+        target: Pool
+        xp: 45
+        isCompleted: 0
+      - questType: 1
+        target: Apple
+        xp: 87
+        isCompleted: 0

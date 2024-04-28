@@ -3,117 +3,117 @@
   <_characters>
     <Character name="Miguel" questID="Quest1">
       <dialogues>
-        <Dialogue id="0" content="Hello Stranger! What brings you here!">
+        <Dialogue id="0" content="Hello Stranger! My name is Miguel. What brings you here!">
           <decisions>
-            <Decision content="Hi there, would you know where I can find the golden globe?" target="2" />
-            <Decision content="Hi there, are you from here, Im kind of lost?" target="1" />
-            <Decision content="Option3 for id 0" target="3" />
+            <Decision content="Tell me about your quest, Miguel." target="1" />
+            <Decision content="Just passing through, thanks!" target="-1" />
+            <Decision content="What's happening in the town?" target="4" />
           </decisions>
         </Dialogue>
-        <Dialogue id="1" content="Yes, Ive been living here for decades, what brings you here?">
+        <Dialogue id="1" content="I'm glad you asked. I need someone to locate the hidden valley known as Echo Gorge.">
           <decisions>
-            <Decision content="I am looking for the golden globe" target="2" />
-            <Decision content="None of your business!" target="-1" />
-            <Decision content="Option 3 for Id 1" target="4" />
+            <Decision content="I can do that. Where do I start?" target="2" />
+            <Decision content="That sounds dangerous, maybe not." target="-1" />
+            <Decision content="Do you have a map of the area?" target="3" />
           </decisions>
         </Dialogue>
-        <Dialogue id="2" content="The Golden globe, yes; it is in the yellow house!">
+        <Dialogue id="2" content="Start at the old mill by the river. Follow the stream until you reach the northern ridge.">
           <decisions>
-            <Decision content="Thank you!" target="-1" />
-            <Decision content="Brilliant, would you also know about where to find the yellow house" target="3" />
-            <Decision content="Option 3 for id 2" target="4" />
+            <Decision content="Got it. I'll head out now." target="-1" />
+            <Decision content="Can you give me more details?" target="3" />
+            <Decision content="I need some supplies first. Can you help?" target="3" />
           </decisions>
         </Dialogue>
-        <Dialogue id="3" content="Of course, this house is about 100 meters north from here!">
+        <Dialogue id="3" content="Be sure to prepare well. The path is treacherous and wildlife roams freely. Here's a map to guide you.">
           <decisions>
-            <Decision content="Thanks man; much appreciated!" target="-1" />
-            <Decision content="Fantastic!" target="-1" />
-            <Decision content="Option 3 for id 3" target="4" />
+            <Decision content="Thanks for the map and advice. I'll be careful." target="-1" />
+            <Decision content="I think I'll need more than just a map." target="-1" />
+            <Decision content="Maybe I should gather a team." target="-1" />
           </decisions>
         </Dialogue>
-        <Dialogue id="4" content="Whatever">
+        <Dialogue id="4" content="It's been peaceful recently, but there are always adventures to be had!">
           <decisions>
-            <Decision content="this" target="-1" />
-            <Decision content="could" target="-1" />
-            <Decision content="be" target="-1" />
+            <Decision content="Sounds like my kind of place." target="-1" />
+            <Decision content="I'm looking for adventure. Any tips?" target="1" />
+            <Decision content="Seems too quiet for me." target="-1" />
           </decisions>
         </Dialogue>
       </dialogues>
     </Character>
     <Character name="Yasir" questID="Quest2">
       <dialogues>
-        <Dialogue id="0" content="Hey bro">
+        <Dialogue id="0" content="Hey there, wanderer! Have you heard about the cursed statue in our village?">
           <decisions>
-            <Decision content="Test content 1" target="5" />
-            <Decision content="Cha cha" target="5" />
-            <Decision content="Option3 for id 0 other" target="8" />
+            <Decision content="Yes, tell me more about this statue." target="5" />
+            <Decision content="No, what's cursed about it?" target="5" />
+            <Decision content="Cursed statues aren't really my thing." target="-1" />
           </decisions>
         </Dialogue>
-        <Dialogue id="5" content="Yes sir">
+        <Dialogue id="5" content="The statue is said to bring misfortune to anyone who comes near it. We need it destroyed.">
           <decisions>
-            <Decision content="Che" target="5" />
-            <Decision content="LOhfd" target="-1" />
-            <Decision content="option 3 for id 5" target="6" />
+            <Decision content="Why haven't you destroyed it already?" target="6" />
+            <Decision content="What kind of misfortune?" target="8" />
+            <Decision content="I think I can help. What do I need to do?" target="7" />
           </decisions>
         </Dialogue>
-        <Dialogue id="6" content="Mi so hunger">
+        <Dialogue id="6" content="We've tried, but it seems only someone from outside the village can break its curse.">
           <decisions>
-            <Decision content="yappa" target="-1" />
-            <Decision content="ongoing" target="6" />
-            <Decision content="option 3 for id 6" target="8" />
+            <Decision content="I see. It sounds like a challenge." target="7" />
+            <Decision content="That sounds a bit superstitious to me." target="-1" />
+            <Decision content="I'll need some tools to destroy it. Can you provide them?" target="7" />
           </decisions>
         </Dialogue>
-        <Dialogue id="7" content="Lpoe">
+        <Dialogue id="7" content="Great! Here are some tools. Be careful, the statue's curse is powerful.">
           <decisions>
-            <Decision content="Meysi" target="-1" />
-            <Decision content="sdagrsh" target="-1" />
-            <Decision content="option 3 for id 7" target="8" />
+            <Decision content="Thanks for the tools. I'll head there now." target="-1" />
+            <Decision content="Is there anything else I should know before I go?" target="8" />
+            <Decision content="Maybe I should bring some more help just in case." target="-1" />
           </decisions>
         </Dialogue>
-        <Dialogue id="8" content="Again">
+        <Dialogue id="8" content="Many have felt a deep unease and seen bad omens. Be on your guard, and good luck.">
           <decisions>
-            <Decision content="dont know" target="-1" />
-            <Decision content="what to" target="-1" />
-            <Decision content="put here" target="-1" />
+            <Decision content="I appreciate the warning. I'll be cautious." target="-1" />
+            <Decision content="Bad omens? That's just superstition. I'll be fine." target="-1" />
+            <Decision content="Maybe this is too dangerous after all." target="-1" />
           </decisions>
         </Dialogue>
       </dialogues>
     </Character>
-    <Character name="Galen" questID="Quest3">
+    <Character name="Bella" questID="Quest3">
       <dialogues>
-        <Dialogue id="0" content="Hey bro">
+        <Dialogue id="0" content="Greetings, traveler! I seek assistance to retrieve a rare artifact. Are you willing to embark on a perilous journey?">
           <decisions>
-            <Decision content="Test content 1" target="9" />
-            <Decision content="Cha cha" target="11" />
-            <Decision content="Option3 for id 0 other" target="10" />
+            <Decision content="Tell me more about this artifact." target="9" />
+            <Decision content="Perilous journey? Count me in!" target="10" />
+            <Decision content="I'm not sure. What are the risks?" target="12" />
           </decisions>
         </Dialogue>
-        <Dialogue id="9" content="Yes sir">
+        <Dialogue id="9" content="The artifact is known as the Starlight Pendant. It's said to hold the essence of the night sky within its gem.">
           <decisions>
-            <Decision content="Che" target="10" />
-            <Decision content="LOhfd" target="-1" />
-            <Decision content="option 3 for id 5" target="11" />
+            <Decision content="Where can I find this pendant?" target="10" />
+            <Decision content="Sounds mystical. What's its purpose?" target="11" />
+            <Decision content="I'll need to prepare if I'm to retrieve such an item." target="10" />
           </decisions>
         </Dialogue>
-        <Dialogue id="10" content="Mi so hunger">
+        <Dialogue id="10" content="The pendant is hidden deep within the Whispering Caves, guarded by creatures of shadow. You must be cautious.">
           <decisions>
-            <Decision content="yappa" target="-1" />
-            <Decision content="ongoing" target="11" />
-            <Decision content="option 3 for id 6" target="12" />
+            <Decision content="I understand. I'll proceed with caution." target="-1" />
+            <Decision content="Can you provide me with any tools or guides?" target="11" />
+            <Decision content="Perhaps this is too dangerous. I may need to rethink." target="-1" />
           </decisions>
         </Dialogue>
-        <Dialogue id="11" content="Lpoe">
+        <Dialogue id="11" content="Indeed, I can provide you with a lantern that reveals hidden paths and dangers. Will that help?">
           <decisions>
-            <Decision content="Meysi" target="-1" />
-            <Decision content="sdagrsh" target="-1" />
-            <Decision content="option 3 for id 7" target="12" />
+            <Decision content="Yes, that would be very helpful. I'm ready to go now." target="-1" />
+            <Decision content="That sounds useful. Let me gather some allies first." target="-1" />
+            <Decision content="I think I need more than just a lantern for this task." target="-1" />
           </decisions>
         </Dialogue>
-        <Dialogue id="12" content="Again">
+        <Dialogue id="12" content="The journey is fraught with danger, but I can supply you with a lantern that reveals hidden paths and dangers. Will that help?">
           <decisions>
-            <Decision content="dont know" target="-1" />
-            <Decision content="what to" target="-1" />
-            <Decision content="put here" target="-1" />
+            <Decision content="Yes, that would be very helpful. I'm ready to go now." target="-1" />
+            <Decision content="That sounds useful. Let me gather some allies first." target="-1" />
+            <Decision content="I think I need more than just a lantern for this task." target="-1" />
           </decisions>
         </Dialogue>
       </dialogues>

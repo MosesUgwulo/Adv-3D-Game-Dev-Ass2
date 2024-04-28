@@ -176,8 +176,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10eaeb14fdbe87e40b68595297076bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcName: Miguel
-  questID: Quest1
+  npcName: Yasir
+  questID: Quest2
   character:
     name: 
     questID: 

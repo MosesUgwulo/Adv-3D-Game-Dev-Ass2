@@ -49,11 +49,10 @@ namespace Player
 
         private void OnControllerColliderHit(ControllerColliderHit hit)
         {
+            var (_, _, result) = QuestManager.Instance.GetCurrentQuestStageResult();
+            
             if (hit.collider.CompareTag("NPC"))
             {
-                var quest = QuestManager.Instance.GetQuest();
-                var stage = QuestManager.Instance.GetStage(quest.stages[0].stageID);
-                var result = QuestManager.Instance.GetResult(stage.stageID);
 
                 if (result.target != hit.collider.GetComponent<Interactable>().npcName)
                 {
@@ -63,7 +62,55 @@ namespace Player
                 var interactable = hit.gameObject.GetComponent<Interactable>();
                 Debug.Log("Interacting with " + interactable.npcName);
                 interactable.Interact();
+            }
+
+            if (hit.collider.CompareTag("Barrier"))
+            {
+                if (result.target != "Barrier")
+                {
+                    Debug.Log("Wrong Barrier");
+                    return;
+                }
+                Destroy(hit.collider.gameObject.transform.parent.gameObject);
                 result.isCompleted = true;
+                HUDManager.Instance.ShowXpText();
+                QuestManager.Instance.UpdateQuestUI();
+            }
+            
+            if (hit.collider.CompareTag("Echo Gorge"))
+            {
+                if (result.target != "Echo Gorge")
+                {
+                    Debug.Log("Wrong Location");
+                    return;
+                }
+                result.isCompleted = true;
+                HUDManager.Instance.ShowXpText();
+                QuestManager.Instance.UpdateQuestUI();
+            }
+
+            if (hit.collider.CompareTag("Village"))
+            {
+                if (result.target != "Village")
+                {
+                    Debug.Log("Wrong Location");
+                    return;
+                }
+                Destroy(hit.collider.gameObject);
+                result.isCompleted = true;
+                HUDManager.Instance.ShowXpText();
+                QuestManager.Instance.UpdateQuestUI();
+            }
+
+            if (hit.collider.CompareTag("Cursed Statue"))
+            {
+                if (result.target != "Cursed Statue")
+                {
+                    Debug.Log("Wrong Location");
+                    return;
+                }
+                result.isCompleted = true;
+                HUDManager.Instance.ShowXpText();
                 QuestManager.Instance.UpdateQuestUI();
             }
         }

@@ -11,7 +11,7 @@ namespace Managers
     public class DialogueManager : MonoBehaviour
     {
         public static DialogueManager Instance;
-        // public List<Character> characters;
+        public List<Character> characters;
         private Queue<string> _sentences;
         private Dictionary<string, Character> _charactersById;
         private Dialogue _currentDialogue;
@@ -43,7 +43,7 @@ namespace Managers
             {
                 foreach (var character in Load(_filePath)._characters)
                 {
-                    // characters.Add(character);
+                    characters.Add(character);
                     _charactersById.Add(character.questID, character);
                 }
             }
@@ -165,6 +165,10 @@ namespace Managers
 
         private void EndDialogue()
         {
+            var (_, _, result) = QuestManager.Instance.GetCurrentQuestStageResult();
+            result.isCompleted = true;
+            HUDManager.Instance.ShowXpText();
+            QuestManager.Instance.UpdateQuestUI();
             HUDManager.Instance.anim.SetBool(IsOpen, false);
         }
 
